@@ -1,5 +1,6 @@
 package com.example.estudo_patudos_api_spring_jpa.controller;
 
+import com.example.estudo_patudos_api_spring_jpa.dto.InstituicaoDTO;
 import com.example.estudo_patudos_api_spring_jpa.model.Instituicao;
 import com.example.estudo_patudos_api_spring_jpa.service.InstituicaoService;
 import org.springframework.web.bind.annotation.*;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/instituicoes") // Rota diferente!
+@RequestMapping("/instituicoes")
 public class InstituicaoController {
 
     private final InstituicaoService service;

@@ -20,7 +20,6 @@ public class InstituicaoService {
     }
 
     public Instituicao salvar(Instituicao instituicao) {
-        // REGRA DE NEGÓCIO: Aqui o "copia e cola" muda
         if (instituicao.getCnpj() == null || instituicao.getCnpj().length() < 14) {
             throw new RuntimeException("CNPJ inválido!");
         }

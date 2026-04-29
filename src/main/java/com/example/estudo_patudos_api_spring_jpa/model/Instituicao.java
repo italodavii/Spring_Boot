@@ -18,9 +18,7 @@ public class Instituicao {
     private String cnpj;
     private String cidade;
 
-    // Relacionamento @OneToMany: Uma instituição pode ter vários animais
-    // O "mappedBy" diz que o controle da ligação está lá na classe Animal
     @OneToMany(mappedBy = "instituicao")
-    @JsonIgnore // Isso impede que, ao listar a ONG, ela tente listar todos os animais de volta
+    @JsonIgnore
     private List<Animal> animais;
 }

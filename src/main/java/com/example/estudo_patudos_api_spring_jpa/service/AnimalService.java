@@ -33,14 +33,10 @@ public class AnimalService {
     }
 
     public Animal salvar(Animal animal) {
-        // Exemplo de regra de negócio:
         if (animal.getNome() == null || animal.getNome().isEmpty()) {
             throw new RuntimeException("Nome do animal é obrigatório!");
         }
-        // 2. Verificação de Relacionamento
         if (animal.getInstituicao() != null && animal.getInstituicao().getId() != null) {
-            // Opcional: Você poderia buscar no banco para validar se a Instituição existe
-            // Mas o JPA já tentará fazer esse vínculo pelo ID enviado.
         }
         return repository.save(animal);
     }

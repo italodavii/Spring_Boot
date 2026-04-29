@@ -11,16 +11,15 @@ import java.util.List;
 @RequestMapping("/animais")
 public class AnimalController {
 
-    private final AnimalService service; // O Controller agora só conhece o Service
+    private final AnimalService service;
 
-    // Atualize o construtor para receber o Service
     public AnimalController(AnimalService service) {
         this.service = service;
     }
 
     @GetMapping
     public List<AnimalDTO> listar() {
-        return service.listarTodos(); // Chama o service
+        return service.listarTodos();
     }
 
     @PostMapping
@@ -30,6 +29,6 @@ public class AnimalController {
 
     @DeleteMapping("/{id}")
     public void excluir(@PathVariable Long id) {
-        service.excluir(id); // O erro do DELETE deve sumir aqui
+        service.excluir(id);
     }
 }
