@@ -18,12 +18,17 @@ public class InstituicaoController {
     }
 
     @GetMapping
-    public List<Instituicao> listar() {
+    public List<InstituicaoDTO> listar() {
         return service.listarTodas();
     }
 
     @PostMapping
-    public Instituicao cadastrar(@RequestBody Instituicao instituicao) {
+    public InstituicaoDTO cadastrar(@RequestBody Instituicao instituicao) {
         return service.salvar(instituicao);
+    }
+
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable Long id) {
+        service.excluir(id);
     }
 }

@@ -23,7 +23,7 @@ public class AnimalController {
     }
 
     @PostMapping
-    public Animal cadastrar(@RequestBody Animal animal) {
+    public AnimalDTO cadastrar(@RequestBody Animal animal) {
         return service.salvar(animal);
     }
 

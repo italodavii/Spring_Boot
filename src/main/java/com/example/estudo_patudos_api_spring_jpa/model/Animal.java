@@ -13,8 +13,7 @@ public class Animal {
 
     private String nome;
     private String especie;
-    private Integer idade;
-    private String urlFoto;
+    private String idade;
 
     @ManyToOne
     @JoinColumn(name = "instituicao_id")

@@ -1,6 +1,5 @@
 package com.example.estudo_patudos_api_spring_jpa.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,8 +16,4 @@ public class Instituicao {
     private String nome;
     private String cnpj;
     private String cidade;
-
-    @OneToMany(mappedBy = "instituicao")
-    @JsonIgnore
-    private List<Animal> animais;
 }
